@@ -96,16 +96,16 @@ def stop_pomodoro(update, context):
 
 
 # Function to handle all messages
-def echo(update, context):
-    global in_break
-    if in_break:
-        update.message.reply_text(
-            "Please use the /start command to resume the Pomodoro session."
-        )
-    else:
-        update.message.reply_text(
-            "You're currently in a Pomodoro session. Please focus until the break."
-        )
+# def echo(update, context):
+#     global in_break
+#     if in_break:
+#         update.message.reply_text(
+#             "Please use the /start command to resume the Pomodoro session."
+#         )
+#     else:
+#         update.message.reply_text(
+#             "You're currently in a Pomodoro session. Please focus until the break."
+#         )
 
 
 def main():
