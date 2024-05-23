@@ -55,7 +55,7 @@ def short_break_timer(context: CallbackContext):
     user_data = job.context['user_data']
     pomodoro_cycles = user_data['pomodoro_cycles']
 
-    context.bot.send_message(chat_id=chat_id, text="Short break over! Time for another Pomodoro session for 25 min.")
+    context.bot.send_message(chat_id=chat_id, text="Short break over! Time for another Pomodoro session.")
     context.job_queue.run_once(pomodoro_timer, POMODORO_DURATION, context={'chat_id': chat_id, 'user_data': user_data})
 
 
