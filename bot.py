@@ -1,5 +1,6 @@
 import logging
-
+import os
+from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
 
@@ -10,8 +11,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+load_dotenv()
+
 # Telegram Bot Token
-TOKEN = "6745939952:AAFd0OSxtOG9jR-wImr7v9U9VuJNRHMM--Y"
+TOKEN = os.environ.get("TOKEN")
 
 # Pomodoro timer settings (in seconds)
 POMODORO_DURATION = 25 * 60  # 25 minutes
